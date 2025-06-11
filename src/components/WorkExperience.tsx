@@ -8,7 +8,7 @@ export const WorkExperience: React.FC = () => {
       <img
         src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/19e12d7bb1682fb09779e8b5fa939dd45a544f4f?placeholderIfAbsent=true"
         alt="Work experience icon"
-        className="aspect-[6.49] object-contain w-[156px] max-w-full mt-[370px] max-md:mt-10"
+        className="aspect-[6.49] object-contain w-[156px] max-w-full mt-12 max-md:mt-10"
       />
       <h2 className="text-black text-[32px] font-semibold font-manrope leading-none tracking-[-0.96px] mt-[22px]">
         Here's What I've Been Up To.
