@@ -63,45 +63,20 @@ export const WorkExperience: React.FC = () => {
           </div>
         </div>
       </ProjectCard>
-
-      <div className="w-[518px] max-w-full mt-[85px] max-md:mt-10">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-          <div className="w-[69%] max-md:w-full max-md:ml-0">
-            <div className="flex items-start gap-[13px] font-medium tracking-[-0.32px] max-md:mt-10">
-              <div className="flex flex-col text-[15px] text-[rgba(179,179,179,1)] leading-none">
-                <h3 className="text-black text-2xl font-semibold font-manrope leading-[1.1] tracking-[-0.72px] self-stretch">
-                  Work Experience
-                </h3>
-                <div className="mt-[53px] max-md:mt-10">
-                  Mar 2025 - Present
-                </div>
-                <div className="text-base font-normal font-manrope leading-none mt-10">
-                  Oct 2024 - Feb 2025
-                </div>
-                <div className="mt-[38px]">
-                  Jun 2024 - Oct 2024
-                </div>
-              </div>
-              <div className="text-base text-[rgba(90,90,90,1)] mt-[77px] max-md:mt-10">
-                <div className="leading-none max-md:mr-[5px]">
-                  Lead Designer at
-                </div>
-                <div className="leading-none mt-9">
-                  UI/UX Designer at
-                </div>
-                <div className="text-[15px] font-normal font-manrope leading-none mt-[35px] max-md:mr-2.5">
-                  Design Intern at
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-[31%] ml-5 max-md:w-full max-md:ml-0">
-            <div className="grow mt-[72px] max-md:mt-10">
-              <KodabyteCompanyBadge/>
-              <LevantateCompanyBadge/>
-              <MarketsMojoCompanyBadge/>
-            </div>
-          </div>
+      <div className="w-full flex justify-center mt-24">
+        <div className="grid grid-cols-3 gap-x-12 gap-y-6 max-w-4xl w-full">
+          {/* Row 1 */}
+          <div className="flex items-center justify-center text-[rgba(179,179,179,1)] text-[24px] font-manrope font-normal">Mar 2025 - Present</div>
+          <div className="flex items-center justify-center text-[rgba(90,90,90,1)] text-[24px] font-manrope font-normal">Lead Designer at</div>
+          <div className="flex items-center justify-center"><KodabyteCompanyBadge /></div>
+          {/* Row 2 */}
+          <div className="flex items-center justify-center text-[rgba(179,179,179,1)] text-[24px] font-manrope font-normal">Oct 2024 - Feb 2025</div>
+          <div className="flex items-center justify-center text-[rgba(90,90,90,1)] text-[24px] font-manrope font-normal">UI/UX Designer at</div>
+          <div className="flex items-center justify-center"><LevantateCompanyBadge /></div>
+          {/* Row 3 */}
+          <div className="flex items-center justify-center text-[rgba(179,179,179,1)] text-[24px] font-manrope font-normal">Jun 2024 - Oct 2024</div>
+          <div className="flex items-center justify-center text-[rgba(90,90,90,1)] text-[24px] font-manrope font-normal">Design Intern at</div>
+          <div className="flex items-center justify-center"><MarketsMojoCompanyBadge /></div>
         </div>
       </div>
     </section>

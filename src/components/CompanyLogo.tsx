@@ -8,7 +8,7 @@ export const KodabyteCompanyBadge = () => {
 }
 export const LevantateCompanyBadge = () => {
   return (
-    <div className="rounded-[10px] mt-[17px] flex gap-2 bg-[#EFEFEF] justify-center items-center p-1 border border-black/10">
+    <div className="rounded-[10px] flex gap-2 bg-[#EFEFEF] justify-center items-center p-1 border border-black/10">
         <img className="" src="/levantate.svg" alt="" />
         <p className="text-black text-base">Levantate Labs</p>
     </div>
@@ -17,7 +17,7 @@ export const LevantateCompanyBadge = () => {
 
 export const MarketsMojoCompanyBadge = () => {
   return (
-    <div className="rounded-[10px] mt-[17px] flex gap-2 bg-[#EEFFE2] justify-center items-center p-1 border border-black/10">
+    <div className="rounded-[10px] flex gap-2 bg-[#EEFFE2] justify-center items-center p-1 border border-black/10">
         <img className="w-5 h-5" src="/markets-mojo.png"  alt="" />
         <p className="text-[#5F8E3E] text-base">Markets Mojo</p>
     </div>
