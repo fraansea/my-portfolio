@@ -1,5 +1,6 @@
 import React from 'react';
 import { ProjectCard } from './ProjectCard';
+import { KodabyteCompanyBadge, LevantateCompanyBadge, MarketsMojoCompanyBadge } from './CompanyLogo';
 
 export const WorkExperience: React.FC = () => {
   return (
@@ -96,21 +97,9 @@ export const WorkExperience: React.FC = () => {
           </div>
           <div className="w-[31%] ml-5 max-md:w-full max-md:ml-0">
             <div className="grow mt-[72px] max-md:mt-10">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/2a74040c32258fcfdced6461b48544625c9b4b12?placeholderIfAbsent=true"
-                alt="Company 1 logo"
-                className="aspect-[3.73] object-contain w-[123px] rounded-[10px]"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/79da03c92b0a89c9b94bfcbaed1499fffdddcb9b?placeholderIfAbsent=true"
-                alt="Company 2 logo"
-                className="aspect-[3.82] object-contain w-[130px] mt-[18px] rounded-[10px] max-md:mr-2"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/92c140c2d1efd341f69afeda4d6b9e602579a215?placeholderIfAbsent=true"
-                alt="Company 3 logo"
-                className="aspect-[4.18] object-contain w-[138px] mt-[17px] rounded-[10px]"
-              />
+              <KodabyteCompanyBadge/>
+              <LevantateCompanyBadge/>
+              <MarketsMojoCompanyBadge/>
             </div>
           </div>
         </div>
