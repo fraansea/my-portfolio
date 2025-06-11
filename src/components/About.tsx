@@ -12,27 +12,28 @@ export const About: React.FC = () => {
       <p className="text-[rgba(90,90,90,0.85)] text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-12">
         I thrive on transforming ideas into reality, whether it's crafting digital interfaces, designing immersive visuals, or building websites that feel effortless to use.
       </p>
-      <div className="relative flex justify-center items-center mt-10 h-[260px] w-[420px] max-w-full">
-  {/* Left Polaroid */}
-  <div className="absolute left-10 top-6 rotate-[-6deg] z-10 bg-white shadow-md p-2 w-[180px]">
-    <img
-      src="/pic1.png"
-      alt="Some of my recent photography"
-      className="w-full h-[180px] object-cover rounded"
-    />
-    <p className="mt-1 text-center text-xs italic">Some of my recent photography</p>
-  </div>
+      
+     <div className="relative flex justify-center items-center mt-10 h-[260px] w-[420px] max-w-full">
+      {/* Left Polaroid */}
+      <div className="absolute left-10 top-6 rotate-[-6deg] z-10 bg-white shadow-md p-2 w-[180px]">
+       <img
+        src="/pic1.png"
+        alt="Some of my recent photography"
+        className="w-full h-[180px] object-cover rounded"
+        />
+       <p className="mt-1 text-center text-xs italic">Some of my recent photography</p>
+      </div>
 
-  {/* Right Polaroid */}
-  <div className="absolute left-32 top-[-8px] rotate-[8deg] z-20 bg-white shadow-lg p-2 w-[180px]">
-    <img
-      src="/pic2.png"
-      alt="Some of my recent photography"
-      className="w-full h-[180px] object-cover rounded"
-    />
-    <p className="mt-1 text-center text-xs italic">Some of my recent photography</p>
-  </div>
-</div>
+      {/* Right Polaroid */}
+      <div className="absolute left-32 top-[-8px] rotate-[8deg] z-20 bg-white shadow-lg p-2 w-[180px]">
+       <img
+        src="/pic2.png"
+        alt="Some of my recent photography"
+        className="w-full h-[180px] object-cover rounded"
+       />
+       <p className="mt-1 text-center text-xs italic">Some of my recent photography</p>
+      </div>
+      </div>
 
 
     </section>
