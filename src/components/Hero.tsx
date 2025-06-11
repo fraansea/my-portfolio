@@ -32,11 +32,17 @@ export const Hero: React.FC = () => {
           </span>
         </div>
       </div>
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/4e95ec54101b0a4d4b1a171b9f565ea3e17a63bf?placeholderIfAbsent=true"
-        alt="Portfolio showcase"
-        className="aspect-[4.33] object-contain w-full self-stretch mt-[70px] max-md:max-w-full max-md:mt-10"
-      />
+      <div className="flex flex-row justify-center items-end gap-8 mt-20 w-full max-w-6xl overflow-x-auto">
+        {[1, 2, 3, 4, 5].map((i) => (
+          <div key={i} className="bg-white rounded-[20px] shadow-lg p-2 flex items-center justify-center" style={{ width: 350, height: 220, minWidth: 350, minHeight: 220 }}>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/4e95ec54101b0a4d4b1a171b9f565ea3e17a63bf?placeholderIfAbsent=true"
+              alt={`Project ${i}`}
+              className="object-contain w-full h-full rounded-[16px]"
+            />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
