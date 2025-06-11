@@ -2,14 +2,14 @@ import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <section className="flex flex-col items-center text-center max-w-[1440px] mx-auto">
+    <section className="flex flex-col   max-w-[1440px] mx-auto">
       <h2 className="text-black text-3xl font-bold font-manrope leading-tight tracking-tight mt-20 mb-8">
         About
       </h2>
-      <p className="text-[rgba(90,90,90,0.85)] text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-8">
+      <p className="text-zinc-600 text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-8">
         I'm Francis Gigi, a designer, coder, and photography lover. I'm a Computer Science student at Christ College of Engineering. I enjoy building creative projects and exploring new ideas in tech, design, and photography.
       </p>
-      <p className="text-[rgba(90,90,90,0.85)] text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-12">
+      <p className="text-zinc-600 text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-12">
         I thrive on transforming ideas into reality, whether it's crafting digital interfaces, designing immersive visuals, or building websites that feel effortless to use.
       </p>
       
