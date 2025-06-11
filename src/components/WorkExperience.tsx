@@ -25,44 +25,10 @@ export const WorkExperience: React.FC = () => {
       <ProjectCard
         title="Sa interview"
         description="A Streamline your hiring process, gain valuable insights, and elevate your workforce with our cutting-edge Auto...."
-        imageUrl=""
+        imageUrl="/one.png"
         imageAlt="Sa interview project"
         linkIcon="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/8a26b7988fc4f23af4022d5235373e76dcd46652?placeholderIfAbsent=true"
-      >
-        <div className="bg-white flex w-full flex-col overflow-hidden items-stretch pb-4 rounded-lg max-md:max-w-full">
-          <div className="w-full overflow-hidden pt-3.5 pb-[124px] px-[23px] max-md:max-w-full max-md:pb-[100px] max-md:px-5">
-            <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-              <div className="w-[77%] max-md:w-full max-md:ml-0">
-                <div className="flex w-full flex-col font-normal text-center mt-[5px] max-md:mt-10">
-                  <div className="flex gap-[15px] text-[7px] text-white">
-                    <div>Solutions</div>
-                    <div>Features</div>
-                    <div>Contact Us</div>
-                  </div>
-                  <div className="text-[rgba(240,240,240,1)] text-sm leading-[17px] w-[254px] mt-[23px]">
-                    Revolutionizing Interviews with Autonomous AI Technology
-                  </div>
-                </div>
-              </div>
-              <div className="w-[23%] ml-5 max-md:w-full max-md:ml-0">
-                <div className="self-stretch bg-white min-h-5 gap-[5px] overflow-hidden text-[8px] text-black font-semibold text-center w-full px-[9px] py-[5px] rounded-[5px] max-md:mt-10">
-                  Book a Demo
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="self-center flex w-[360px] max-w-full flex-col items-stretch text-[8px] text-white text-center mt-[26px] pt-[5px] pb-[18px] px-[51px] rounded-[9px] max-md:px-5">
-            <div className="font-extrabold leading-[1.4] self-center">
-              Why Us?
-            </div>
-            <div className="font-normal leading-3 mt-1.5">
-              Streamline your hiring process, gain valuable insights, and
-              elevate your workforce with our cutting-edge Autonomous AI
-              Interview platform.
-            </div>
-          </div>
-        </div>
-      </ProjectCard>
+      />
       <div className="w-full flex justify-center mt-24">
         <div className="grid grid-cols-3 gap-x-12 gap-y-6 max-w-4xl w-full">
           {/* Row 1 */}

@@ -35,7 +35,7 @@ export const ContactForm: React.FC = () => {
 
   return (
     <section className="flex flex-col items-center">
-      <h2 className="text-black text-[22px] font-semibold leading-none tracking-[-0.72px] mt-[92px] max-md:mt-10">
+      <h2 className="text-black text-[22px] font-semibold leading-none tracking-[-0.72px] mt-8 max-md:mt-6">
         Get in touch
       </h2>
       

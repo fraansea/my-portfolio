@@ -1,4 +1,6 @@
 import React from 'react';
+import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
+import AutoScroll from 'embla-carousel-auto-scroll';
 
 export const Hero: React.FC = () => {
   return (
@@ -32,16 +34,45 @@ export const Hero: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className="flex flex-row justify-center items-end gap-8 mt-20 w-full max-w-6xl overflow-x-auto">
-        {[1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="bg-white rounded-[20px] shadow-lg p-2 flex items-center justify-center" style={{ width: 350, height: 220, minWidth: 350, minHeight: 220 }}>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/4e95ec54101b0a4d4b1a171b9f565ea3e17a63bf?placeholderIfAbsent=true"
-              alt={`Project ${i}`}
-              className="object-contain w-full h-full rounded-[16px]"
-            />
-          </div>
-        ))}
+      {/* Carousel for project containers */}
+      <div className="w-full max-w-6xl mt-16">
+        {(() => {
+          const carouselOptions = { loop: true };
+          const autoScrollPlugin = React.useRef(
+            AutoScroll({
+              speed: 2, // Adjust for desired smoothness
+              stopOnInteraction: false,
+              stopOnMouseEnter: false,
+            })
+          ).current;
+          return (
+            <Carousel opts={carouselOptions} plugins={[autoScrollPlugin]} className="mx-auto">
+              <CarouselContent>
+                {[
+                  '/one.png',
+                  '/two.png',
+                  '/three.png',
+                  '/pic1.png',
+                  '/pic2.png',
+                  '/sample.png',
+                ].map((src, i) => (
+                  <CarouselItem key={i} className="flex justify-center px-2 min-w-[350px] max-w-[420px]">
+                    <div
+                      className="bg-neutral-50 overflow-hidden rounded-[20px] border border-[rgba(242,242,242,1)] border-solid flex items-center justify-center p-4"
+                      style={{ width: 350, height: 220, minWidth: 350, minHeight: 220 }}
+                    >
+                      <img
+                        src={src}
+                        alt={`Project ${i + 1}`}
+                        className="object-contain w-full h-full rounded-[16px]"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          );
+        })()}
       </div>
     </section>
   );

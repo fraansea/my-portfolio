@@ -16,25 +16,25 @@ export const About: React.FC = () => {
       <div className='flex items-center justify-center'>
 
       
-     <div className="relative flex justify-center items-center mt-10 h-[320px] w-full max-w-full">
+     <div className="relative flex justify-center items-center mt-10 h-[420px] w-full max-w-full">
       {/* Left Polaroid */}
-      <div className="absolute left-36 top-6 rotate-[-6deg] z-10 bg-white shadow-md p-2 w-[180px]">
+      <div className="absolute left-1/2 top-6 -translate-x-[70%] rotate-[-6deg] z-10 bg-white shadow-md p-4 w-[280px]">
        <img
         src="/pic1.png"
         alt="Some of my recent photography"
-        className="w-full h-[180px] object-cover rounded"
+        className="w-full h-[260px] object-cover rounded"
         />
-       <p className="mt-1 text-center text-xs italic">Some of my recent photography</p>
+       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '2rem' }}>Some of my recent photography</p>
       </div>
 
       {/* Right Polaroid */}
-      <div className="absolute left-80 top-[12px] rotate-[8deg] z-20 bg-white shadow-lg p-2 w-[180px]">
+      <div className="absolute left-1/2 top-[24px] -translate-x-[20%] rotate-[8deg] z-20 bg-white shadow-lg p-4 w-[280px]">
        <img
         src="/pic2.png"
         alt="Some of my recent photography"
-        className="w-full h-[180px] object-cover rounded"
+        className="w-full h-[260px] object-cover rounded"
         />
-       <p className="mt-1 text-center text-xs italic">Some of my recent photography</p>
+       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '2rem' }}>Some of my recent photography</p>
       </div>
         </div>
       </div>
