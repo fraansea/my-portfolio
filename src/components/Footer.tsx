@@ -3,7 +3,7 @@ import React from 'react';
 export const Footer: React.FC = () => {
   return (
     <footer className="flex flex-col items-center">
-      <p className="text-[rgba(90,90,90,1)] text-base font-normal leading-none tracking-[0.16px] text-center mt-28 max-md:mt-10">
+      <p className="text-[rgba(90,90,90,1)] text-base font-normal font-manrope leading-none tracking-[0.16px] text-center mt-28 max-md:mt-10">
         Copyright © 2025 Francis Gigi. All rights reserved.
       </p>
       <img

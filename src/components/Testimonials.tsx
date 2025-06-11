@@ -30,25 +30,18 @@ export const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center">
-      <h2 className="text-black text-[23px] font-semibold leading-none tracking-[-0.72px] mt-[93px] max-md:mt-10">
-        Testimonials
-      </h2>
-      
-      <div className="self-stretch flex w-full gap-5 flex-wrap justify-between mt-[75px] max-md:max-w-full max-md:mt-10">
-        <div className="bg-neutral-50 overflow-hidden rounded-[20px] max-md:hidden">
-          <div className="border flex shrink-0 h-[302px] rounded-[20px] border-[rgba(242,242,242,1)] border-solid max-md:hidden" />
-        </div>
-        
+    <section className="flex flex-col items-center w-full py-24">
+      <h2 className="text-black text-2xl font-bold font-manrope text-center mb-12">Testimonials</h2>
+      <div className="flex flex-row flex-wrap justify-center gap-8 w-full max-w-[1440px]">
         {testimonials.map((testimonial, index) => (
-          <TestimonialCard
-            key={index}
-            content={testimonial.content}
-            name={testimonial.name}
-            role={testimonial.role}
-            avatarUrl={testimonial.avatarUrl}
-            className={index === 0 || index === 2 ? "self-stretch" : ""}
-          />
+          <div key={index} className="flex-1 min-w-[320px] max-w-[500px]">
+            <TestimonialCard
+              content={testimonial.content}
+              name={testimonial.name}
+              role={testimonial.role}
+              avatarUrl={testimonial.avatarUrl}
+            />
+          </div>
         ))}
       </div>
     </section>

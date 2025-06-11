@@ -5,10 +5,10 @@ export const Services: React.FC = () => {
     <section className="flex flex-col items-center">
       <div className="bg-[rgba(0,0,0,0.1)] flex w-[510px] shrink-0 max-w-full h-px mt-[75px] max-md:mt-10" />
       
-      <h2 className="text-black text-[31px] font-semibold leading-none tracking-[-0.96px] text-center mt-[95px] max-md:mt-10">
+      <h2 className="text-black text-[31px] font-semibold font-manrope leading-none tracking-[-0.96px] text-center mt-[95px] max-md:mt-10">
         How Can I Help?
       </h2>
-      <p className="text-[rgba(90,90,90,1)] text-base font-normal leading-none tracking-[0.16px] text-center mt-[19px]">
+      <p className="text-[rgba(90,90,90,1)] text-base font-normal font-manrope leading-none tracking-[0.16px] text-center mt-[19px]">
         Let's turn your vision into something amazing.
       </p>
       

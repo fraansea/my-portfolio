@@ -9,7 +9,7 @@ export const WorkExperience: React.FC = () => {
         alt="Work experience icon"
         className="aspect-[6.49] object-contain w-[156px] max-w-full mt-[370px] max-md:mt-10"
       />
-      <h2 className="text-black text-[32px] font-semibold leading-none tracking-[-0.96px] mt-[22px]">
+      <h2 className="text-black text-[32px] font-semibold font-manrope leading-none tracking-[-0.96px] mt-[22px]">
         Here's What I've Been Up To.
       </h2>
       
@@ -68,13 +68,13 @@ export const WorkExperience: React.FC = () => {
           <div className="w-[69%] max-md:w-full max-md:ml-0">
             <div className="flex items-start gap-[13px] font-medium tracking-[-0.32px] max-md:mt-10">
               <div className="flex flex-col text-[15px] text-[rgba(179,179,179,1)] leading-none">
-                <h3 className="text-black text-2xl font-semibold leading-[1.1] tracking-[-0.72px] self-stretch">
+                <h3 className="text-black text-2xl font-semibold font-manrope leading-[1.1] tracking-[-0.72px] self-stretch">
                   Work Experience
                 </h3>
                 <div className="mt-[53px] max-md:mt-10">
                   Mar 2025 - Present
                 </div>
-                <div className="text-base leading-none mt-10">
+                <div className="text-base font-normal font-manrope leading-none mt-10">
                   Oct 2024 - Feb 2025
                 </div>
                 <div className="mt-[38px]">
@@ -88,7 +88,7 @@ export const WorkExperience: React.FC = () => {
                 <div className="leading-none mt-9">
                   UI/UX Designer at
                 </div>
-                <div className="text-[15px] leading-none mt-[35px] max-md:mr-2.5">
+                <div className="text-[15px] font-normal font-manrope leading-none mt-[35px] max-md:mr-2.5">
                   Design Intern at
                 </div>
               </div>
