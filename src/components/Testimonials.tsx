@@ -1,5 +1,7 @@
 import React from 'react';
 import { TestimonialCard } from './TestimonialCard';
+import { Carousel, CarouselContent, CarouselItem } from './ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 export const Testimonials: React.FC = () => {
   const testimonials = [
@@ -29,20 +31,35 @@ export const Testimonials: React.FC = () => {
     }
   ];
 
+  // Embla carousel options for infinite loop
+  const carouselOptions = { loop: true };
+  const autoplayPlugin = React.useRef(
+    Autoplay({
+      delay: 3500,
+      stopOnInteraction: false
+      // speed: 2, // Removed because not supported
+      // easing: 'cubic-bezier(0.4, 0, 0.2, 1)', // Uncomment if supported by your embla version
+    })
+  ).current;
+
   return (
     <section className="flex flex-col items-center w-full py-24">
       <h2 className="text-black text-2xl font-bold font-manrope text-center mb-12">Testimonials</h2>
-      <div className="flex flex-row flex-wrap justify-center gap-8 w-full max-w-[1440px]">
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="flex-1 min-w-[320px] max-w-[500px]">
-            <TestimonialCard
-              content={testimonial.content}
-              name={testimonial.name}
-              role={testimonial.role}
-              avatarUrl={testimonial.avatarUrl}
-            />
-          </div>
-        ))}
+      <div className="w-full max-w-[1440px]">
+        <Carousel opts={carouselOptions} plugins={[autoplayPlugin]} className="mx-auto">
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="flex justify-center px-2 min-w-[350px] max-w-[420px]">
+                <TestimonialCard
+                  content={testimonial.content}
+                  name={testimonial.name}
+                  role={testimonial.role}
+                  avatarUrl={testimonial.avatarUrl}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
