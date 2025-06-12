@@ -1,22 +1,25 @@
+import { ChevronRight } from 'lucide-react';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface ProjectCardProps {
+  id:string;
   title: string;
   description: string;
   imageUrl: string;
   imageAlt: string;
-  linkIcon: string;
   children?: React.ReactNode;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
   title,
   description,
   imageUrl,
   imageAlt,
-  linkIcon,
   children
 }) => {
+  const navigate = useNavigate()
   return (
     <article className="bg-white w-[510px] max-w-full overflow-hidden text-black mt-11 rounded-[25px] max-md:mt-10">
       <div className="border flex w-full flex-col items-stretch pt-[15px] pb-8 px-4 rounded-[25px] border-[rgba(0,0,0,0.1)] border-solid max-md:max-w-full">
@@ -45,13 +48,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-[rgba(90,90,90,1)] text-base font-normal leading-[22px] tracking-[0.16px] ml-5 mr-12 mt-5 max-md:mx-2.5">
           {description}
         </p>
-        <button className="bg-[rgba(242,242,242,1)] flex items-stretch gap-[9px] text-base font-medium tracking-[-0.32px] leading-none ml-5 mt-[18px] px-6 py-[15px] rounded-[14px] max-md:ml-2.5 max-md:px-5 hover:bg-[rgba(242,242,242,0.8)] transition-colors">
-          <span className="grow">View Project</span>
-          <img
-            src={linkIcon}
-            alt="External link"
-            className="aspect-[1] object-contain w-3.5 shrink-0"
-          />
+        <button onClick={()=>navigate(`/projects/${id}`)} className="bg-[rgba(242,242,242,1)] flex items-stretch gap-[9px] text-base font-medium tracking-[-0.32px] leading-none ml-5 mt-[18px] px-6 py-[15px] rounded-[14px] max-md:ml-2.5 max-md:px-5 hover:bg-[rgba(242,242,242,0.8)] transition-colors">
+          <span className="grow pt-1">View Project</span>
+          <ChevronRight/>
         </button>
       </div>
     </article>
