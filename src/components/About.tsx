@@ -14,28 +14,32 @@ export const About: React.FC = () => {
       </p>
 
       <div className='flex items-center justify-center'>
-        <div className="relative flex justify-center items-center mt-10 h-[420px] w-full max-w-full max-sm:h-[260px]">
-          {/* Left Polaroid */}
-          <div className="absolute left-1/2 top-6 -translate-x-[70%] rotate-[-6deg] z-10 bg-white shadow-md p-4 w-[280px] max-sm:w-[150px] max-sm:p-2 max-sm:-translate-x-1/2">
-            <img
-              src="/pic1.png"
-              alt="Some of my recent photography"
-              className="w-full h-[260px] object-cover rounded max-sm:h-[120px]"
-            />
-            <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1.1rem' }}>Some of my recent photography</p>
-          </div>
 
-          {/* Right Polaroid */}
-          <div className="absolute left-1/2 top-[24px] -translate-x-[20%] rotate-[8deg] z-20 bg-white shadow-lg p-4 w-[280px] max-sm:w-[150px] max-sm:p-2 max-sm:-translate-x-1/2">
-            <img
-              src="/pic2.png"
-              alt="Some of my recent photography"
-              className="w-full h-[260px] object-cover rounded max-sm:h-[120px]"
-            />
-            <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1.1rem' }}>Some of my recent photography</p>
-          </div>
+      
+     <div className="relative flex justify-center items-center mt-10 h-[420px] w-full max-w-full max-sm:h-[260px]">
+      {/* Left Polaroid */}
+      <div className="absolute left-1/2 top-6 -translate-x-[70%] rotate-[-6deg] z-10 bg-white shadow-md p-4 w-[280px] max-sm:w-[150px] max-sm:p-2 max-sm:-translate-x-1/2">
+       <img
+        src="/pic1.png"
+        alt="Some of my recent photography"
+        className="w-full h-[260px] object-cover rounded max-sm:h-[120px]"
+        />
+       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1.1rem' }}>Some of my recent photography</p>
+      </div>
+
+      {/* Right Polaroid */}
+      <div className="absolute left-1/2 top-[24px] -translate-x-[20%] rotate-[8deg] z-20 bg-white shadow-lg p-4 w-[280px] max-sm:w-[150px] max-sm:p-2 max-sm:-translate-x-1/2">
+       <img
+        src="/pic2.png"
+        alt="Some of my recent photography"
+        className="w-full h-[260px] object-cover rounded max-sm:h-[120px]"
+        />
+       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1.1rem' }}>Some of my recent photography</p>
+      </div>
         </div>
       </div>
+
+
     </section>
   );
 };

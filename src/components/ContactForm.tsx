@@ -35,7 +35,7 @@ export const ContactForm: React.FC = () => {
 
   return (
     <section className="flex flex-col items-center px-2 sm:px-0" data-aos="fade-up">
-      <h2 className="text-black text-[22px] font-semibold leading-none tracking-[-0.72px] mt-8 max-md:mt-6 text-center">
+      <h2 className="text-black text-[22px] font-semibold leading-none tracking-[-0.72px] mt-8 max-md:mt-6">
         Get in touch
       </h2>
       
@@ -50,13 +50,13 @@ export const ContactForm: React.FC = () => {
       </p>
       
       {isSubmitted && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-4 text-center">
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-4">
           Thank you! Your message has been sent successfully.
         </div>
       )}
       
-      <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-[510px] mt-[33px] mx-auto max-sm:max-w-sm flex flex-col items-center">
-        <div className="flex gap-5 flex-wrap max-sm:flex-col max-sm:gap-3 w-full">
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-[510px] mt-[33px]">
+        <div className="flex gap-5 flex-wrap max-sm:flex-col max-sm:gap-3">
           <div className="bg-[rgba(187,187,187,0.15)] overflow-hidden flex-1 rounded-[14px] min-w-0 max-sm:w-full">
             <input
               {...register('fullName', { 
