@@ -54,13 +54,13 @@ export const Testimonials: React.FC = () => {
   ).current;
 
   return (
-    <section className="flex flex-col items-center w-full py-24 mt-16 px-4 sm:px-8">
-      <h2 className="text-black text-2xl font-bold font-manrope text-center mb-12 max-sm:text-lg">Testimonials</h2>
+    <section className="flex flex-col items-center w-full py-24 mt-16" data-aos="fade-up">
+      <h2 className="text-black text-2xl font-bold font-manrope text-center mb-12">Testimonials</h2>
       <div className="w-full max-w-[1440px]">
         <Carousel opts={carouselOptions} plugins={[autoScrollPlugin]} className="mx-auto">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="flex justify-center px-2 min-w-[220px] max-w-[350px] sm:min-w-[350px] sm:max-w-[420px]">
+              <CarouselItem key={index} className="flex justify-center px-2 min-w-[350px] max-w-[420px]">
                 <TestimonialCard
                   content={testimonial.content}
                   name={testimonial.name}
