@@ -34,7 +34,7 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col items-center" data-aos="fade-up">
+    <section className="flex flex-col items-center w-full px-4 sm:px-8 md:px-12 max-md:items-center max-md:text-center" data-aos="fade-up">
       <h2 className="text-black text-[22px] font-semibold leading-none tracking-[-0.72px] mt-8 max-md:mt-6">
         Get in touch
       </h2>

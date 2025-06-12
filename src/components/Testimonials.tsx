@@ -54,7 +54,7 @@ export const Testimonials: React.FC = () => {
   ).current;
 
   return (
-    <section className="flex flex-col items-center w-full py-24 mt-16" data-aos="fade-up">
+    <section className="flex flex-col items-center w-full py-24 mt-16 px-4 sm:px-8 md:px-12 max-md:items-center max-md:text-center" data-aos="fade-up">
       <h2 className="text-black text-2xl font-bold font-manrope text-center mb-12">Testimonials</h2>
       <div className="w-full max-w-[1440px]">
         <Carousel opts={carouselOptions} plugins={[autoScrollPlugin]} className="mx-auto">
