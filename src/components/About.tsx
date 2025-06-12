@@ -2,7 +2,7 @@ import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <section className="flex flex-col  max-w-[1440px] mx-auto">
+    <section className="flex flex-col  max-w-[1440px] mx-auto my-auto">
       <h2 className="text-black text-3xl font-bold font-manrope leading-tight tracking-tight mt-20 mb-8">
         About
       </h2>
@@ -18,23 +18,23 @@ export const About: React.FC = () => {
       
      <div className="relative flex justify-center items-center mt-10 h-[420px] w-full max-w-full">
       {/* Left Polaroid */}
-      <div className="absolute left-1/2 top-6 -translate-x-[70%] rotate-[-6deg] z-10 bg-white shadow-md p-4 w-[280px]">
+      <div className="absolute left-[40%] top-6 -translate-x-[70%] rotate-[-6deg] z-10 bg-white shadow-md p-4 w-[280px]">
        <img
         src="/pic1.png"
         alt="Some of my recent photography"
         className="w-full h-[260px] object-cover rounded"
         />
-       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '2rem' }}>Some of my recent photography</p>
+       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1rem' }}>Some of my recent photography</p>
       </div>
 
       {/* Right Polaroid */}
-      <div className="absolute left-1/2 top-[24px] -translate-x-[20%] rotate-[8deg] z-20 bg-white shadow-lg p-4 w-[280px]">
+      <div className="absolute left-[50%] top-[-15%]  -translate-x-[20%] rotate-[10deg] z-20 bg-white shadow-lg p-4 w-[280px]">
        <img
         src="/pic2.png"
         alt="Some of my recent photography"
         className="w-full h-[260px] object-cover rounded"
         />
-       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '2rem' }}>Some of my recent photography</p>
+       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1rem' }}>Some of my recent photography</p>
       </div>
         </div>
       </div>
