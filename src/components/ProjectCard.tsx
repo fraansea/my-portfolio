@@ -1,34 +1,22 @@
+import { ProjectDataInterface } from '@/lib/projectData';
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-interface ProjectCardProps {
-  id:string;
-  title: string;
-  description: string;
-  imageUrl: string;
-  imageAlt: string;
-  children?: React.ReactNode;
-}
+type ProjectCardProps = Pick<ProjectDataInterface, 'id' | 'title' | 'titleImageUrl' | 'description'>;
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
-  id,
-  title,
-  description,
-  imageUrl,
-  imageAlt,
-  children
-}) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({id,titleImageUrl,title,description}) => {
   const navigate = useNavigate()
   return (
+  
     <article className="bg-white w-[510px] max-w-full overflow-hidden text-black mt-11 rounded-[25px] max-md:mt-10">
       <div className="border flex w-full flex-col items-stretch pt-[15px] pb-8 px-4 rounded-[25px] border-[rgba(0,0,0,0.1)] border-solid max-md:max-w-full">
         <div className="bg-[rgba(225,225,225,1)] flex flex-col overflow-hidden items-stretch justify-center px-[22px] py-[25px] rounded-[20px] max-md:max-w-full max-md:px-5">
-          {children || (
+          
             <div className="flex flex-col relative min-h-[308px] w-full overflow-hidden pt-[19px] pb-[60px] px-[51px] rounded-lg max-md:max-w-full max-md:px-5">
               <img
-                src={imageUrl}
-                alt={imageAlt}
+                src={titleImageUrl}
+                alt={id}
                 className="absolute h-full w-full object-cover inset-0"
               />
               <div className="relative flex gap-[15px] text-[7px] font-normal text-white">
@@ -40,7 +28,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 Why Us?
               </div>
             </div>
-          )}
         </div>
         <h3 className="text-[23px] font-semibold leading-none tracking-[-0.72px] ml-5 mt-[30px] max-md:ml-2.5">
           {title}

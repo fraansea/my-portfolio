@@ -1,7 +1,6 @@
 import { ProjectHero } from '@/components/projects/ProjectHero'
 import { ProjectSection } from '@/components/projects/ProjectSection'
 import { projectData } from '@/lib/projectData'
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import NotFound from '../NotFound'
 const ProjectDetails = () => {
