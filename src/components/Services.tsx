@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Services: React.FC = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center" data-aos="fade-up">
       <div className="bg-[rgba(0,0,0,0.1)] flex w-[510px] shrink-0 max-w-full h-px mt-[75px] max-md:mt-10" />
       
       <h2 className="text-black text-[31px] font-semibold font-manrope leading-none tracking-[-0.96px] text-center mt-[95px] max-md:mt-10">

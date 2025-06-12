@@ -1,3 +1,5 @@
+@import 'aos/dist/aos.css';
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -42,14 +44,47 @@
 }
 
 body {
-  cursor: url('/pointer.png'), auto;
-  background: linear-gradient(270deg, #f8fafc, #e0e7ff, #f0abfc, #f8fafc);
-  background-size: 800% 800%;
-  animation: gradientBG 18s ease infinite;
+  background: linear-gradient(270deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb, #fcb69f, #ffecd2) !important;
+  background-size: 1200% 1200% !important;
+  animation: gradientBG 8s ease infinite !important;
 }
 
 @keyframes gradientBG {
   0% {background-position:0% 50%}
   50% {background-position:100% 50%}
   100% {background-position:0% 50%}
+}
+
+.gradient-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 16px;
+  z-index: 9999;
+  background: linear-gradient(90deg, #ff6a00, #ffb347, #43cea2, #185a9d, #ff6a00);
+  background-size: 400% 400%;
+  animation: gradientBarMove 6s ease infinite;
+}
+
+@keyframes gradientBarMove {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
 }

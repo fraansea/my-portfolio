@@ -4,7 +4,7 @@ import { KodabyteCompanyBadge, LevantateCompanyBadge, MarketsMojoCompanyBadge } 
 
 export const WorkExperience: React.FC = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center" data-aos="fade-up">
       <img
         src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/19e12d7bb1682fb09779e8b5fa939dd45a544f4f?placeholderIfAbsent=true"
         alt="Work experience icon"

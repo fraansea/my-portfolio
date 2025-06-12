@@ -34,8 +34,8 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col items-center">
-      <h2 className="text-black text-[22px] font-semibold leading-none tracking-[-0.72px] mt-8 max-md:mt-6">
+    <section className="flex flex-col items-center px-2 sm:px-0" data-aos="fade-up">
+      <h2 className="text-black text-[22px] font-semibold leading-none tracking-[-0.72px] mt-8 max-md:mt-6 text-center">
         Get in touch
       </h2>
       
@@ -50,14 +50,14 @@ export const ContactForm: React.FC = () => {
       </p>
       
       {isSubmitted && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-4">
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-4 text-center">
           Thank you! Your message has been sent successfully.
         </div>
       )}
       
-      <form onSubmit={handleSubmit(onSubmit)} className="w-[510px] max-w-full mt-[33px]">
-        <div className="flex gap-5 flex-wrap">
-          <div className="bg-[rgba(187,187,187,0.15)] overflow-hidden flex-1 rounded-[14px]">
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-[510px] mt-[33px] mx-auto max-sm:max-w-sm flex flex-col items-center">
+        <div className="flex gap-5 flex-wrap max-sm:flex-col max-sm:gap-3 w-full">
+          <div className="bg-[rgba(187,187,187,0.15)] overflow-hidden flex-1 rounded-[14px] min-w-0 max-sm:w-full">
             <input
               {...register('fullName', { 
                 required: 'Full name is required',
@@ -72,7 +72,7 @@ export const ContactForm: React.FC = () => {
             )}
           </div>
           
-          <div className="bg-[rgba(187,187,187,0.15)] overflow-hidden flex-1 rounded-[14px]">
+          <div className="bg-[rgba(187,187,187,0.15)] overflow-hidden flex-1 rounded-[14px] min-w-0 mt-4 sm:mt-0 max-sm:mt-0 max-sm:w-full">
             <input
               {...register('email', { 
                 required: 'Email is required',
@@ -91,7 +91,7 @@ export const ContactForm: React.FC = () => {
           </div>
         </div>
         
-        <div className="bg-[rgba(187,187,187,0.15)] w-full overflow-hidden mt-5 rounded-[14px]">
+        <div className="bg-[rgba(187,187,187,0.15)] w-full overflow-hidden mt-5 rounded-[14px] max-sm:mt-3">
           <textarea
             {...register('message', { 
               required: 'Message is required',
@@ -109,7 +109,7 @@ export const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="bg-[rgba(25,25,25,1)] w-full text-base text-white font-medium tracking-[-0.32px] leading-none mt-5 px-[70px] py-4 rounded-[14px] max-md:px-5 hover:bg-[rgba(25,25,25,0.9)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="bg-[rgba(25,25,25,1)] w-full text-base text-white font-medium tracking-[-0.32px] leading-none mt-5 px-4 py-4 rounded-[14px] max-md:px-5 max-sm:mt-3 hover:bg-[rgba(25,25,25,0.9)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>

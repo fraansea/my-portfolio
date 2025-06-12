@@ -2,44 +2,40 @@ import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <section className="flex flex-col  max-w-[1440px] mx-auto my-auto">
-      <h2 className="text-black text-3xl font-bold font-manrope leading-tight tracking-tight mt-20 mb-8">
+    <section className="flex flex-col max-w-[1440px] mx-auto px-4 sm:px-8" data-aos="fade-up">
+      <h2 className="text-black text-3xl font-bold font-manrope leading-tight tracking-tight mt-20 mb-8 max-sm:text-2xl max-sm:mt-10">
         About
       </h2>
-      <p className="text-zinc-600 text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-8">
+      <p className="text-zinc-600 text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-8 max-sm:text-base">
         I'm Francis Gigi, a designer, coder, and photography lover. I'm a Computer Science student at Christ College of Engineering. I enjoy building creative projects and exploring new ideas in tech, design, and photography.
       </p>
-      <p className="text-zinc-600 text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-12">
+      <p className="text-zinc-600 text-xl font-normal font-manrope leading-8 tracking-wide max-w-2xl mx-auto mb-12 max-sm:text-base">
         I thrive on transforming ideas into reality, whether it's crafting digital interfaces, designing immersive visuals, or building websites that feel effortless to use.
       </p>
 
       <div className='flex items-center justify-center'>
+        <div className="relative flex justify-center items-center mt-10 h-[420px] w-full max-w-full max-sm:h-[260px]">
+          {/* Left Polaroid */}
+          <div className="absolute left-1/2 top-6 -translate-x-[70%] rotate-[-6deg] z-10 bg-white shadow-md p-4 w-[280px] max-sm:w-[150px] max-sm:p-2 max-sm:-translate-x-1/2">
+            <img
+              src="/pic1.png"
+              alt="Some of my recent photography"
+              className="w-full h-[260px] object-cover rounded max-sm:h-[120px]"
+            />
+            <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1.1rem' }}>Some of my recent photography</p>
+          </div>
 
-      
-     <div className="relative flex justify-center items-center mt-10 h-[420px] w-full max-w-full">
-      {/* Left Polaroid */}
-      <div className="absolute left-[40%] top-6 -translate-x-[70%] rotate-[-6deg] z-10 bg-white shadow-md p-4 w-[280px]">
-       <img
-        src="/pic1.png"
-        alt="Some of my recent photography"
-        className="w-full h-[260px] object-cover rounded"
-        />
-       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1rem' }}>Some of my recent photography</p>
-      </div>
-
-      {/* Right Polaroid */}
-      <div className="absolute left-[50%] top-[-15%]  -translate-x-[20%] rotate-[10deg] z-20 bg-white shadow-lg p-4 w-[280px]">
-       <img
-        src="/pic2.png"
-        alt="Some of my recent photography"
-        className="w-full h-[260px] object-cover rounded"
-        />
-       <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1rem' }}>Some of my recent photography</p>
-      </div>
+          {/* Right Polaroid */}
+          <div className="absolute left-1/2 top-[24px] -translate-x-[20%] rotate-[8deg] z-20 bg-white shadow-lg p-4 w-[280px] max-sm:w-[150px] max-sm:p-2 max-sm:-translate-x-1/2">
+            <img
+              src="/pic2.png"
+              alt="Some of my recent photography"
+              className="w-full h-[260px] object-cover rounded max-sm:h-[120px]"
+            />
+            <p className="mt-2 text-center italic" style={{ fontFamily: 'Zeyada, cursive', fontSize: '1.1rem' }}>Some of my recent photography</p>
+          </div>
         </div>
       </div>
-
-
     </section>
   );
 };
