@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import LenisProvider from "./providers/LenisProvider";
+import ProjectDetails from "./pages/projects/ProjectDetails";
+import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
 
@@ -18,9 +20,14 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          <Route element={<Layout />}>
+
           <Route path="/" element={<Index />} />
+          <Route path="/projects/:name" element={<ProjectDetails />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
