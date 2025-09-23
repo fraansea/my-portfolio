@@ -11,10 +11,10 @@ export const Hero: React.FC = () => {
         className="aspect-[1] object-contain w-[90px] sm:w-[100px] max-w-full mt-8 sm:mt-[65px] rounded-full"
       />
       <h1 className="text-black text-[2.1rem] sm:text-[42px] font-extrabold font-manrope leading-tight tracking-tight mt-6 sm:mt-8 max-w-xs sm:max-w-full">
-        Hey, I'm Francis.<br />UI developer& Designer
+        Hey, I'm Francis.<br />Product Designer
       </h1>
-      <p className="text-zinc-600 text-base sm:text-lg font-normal font-manrope leading-snug tracking-wide mt-4 sm:mt-5 max-w-xs sm:max-w-full">
-        Crafting seamless experiences and bold visuals. High school student by day, creative thinker, and aspiring innovator by night.
+      <p className="text-zinc-600 text-base sm:text-lg font-normal font-manrope leading-snug tracking-wide mt-4 sm:mt-5 max-w-xs sm:max-w-full md:w-1/2">
+        Crafting seamless experiences and bold visuals. College student by day, creative thinker, and aspiring innovator by night.
       </p>
       <button className="bg-black text-white text-lg font-manrope font-medium px-8 py-4 rounded-2xl mt-8 sm:mt-[26px] w-full max-w-xs sm:max-w-fit">
         Download Me

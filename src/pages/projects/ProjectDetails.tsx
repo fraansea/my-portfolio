@@ -8,7 +8,7 @@ const ProjectDetails = () => {
   const project = projectData.find((project)=> project.id == id)
   if(!project) return <NotFound/>
   return (
-    <div className="flex w-[510px] max-w-full flex-col items-stretch">
+    <div className="flex w-[510px] max-w-full flex-col items-stretch px-8 md:px-0">
           <ProjectHero />
           
           <ProjectSection

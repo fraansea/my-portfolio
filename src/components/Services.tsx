@@ -12,25 +12,25 @@ export const Services: React.FC = () => {
         Let's turn your vision into something amazing.
       </p>
       
-      <div className="grid grid-cols-2 gap-6 w-full max-w-2xl mt-12">
+      <div className="grid grid-cols-2 gap-6 w-full max-w-2xl mt-12 ">
         {/* Web Development */}
-        <div className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/services/web-dev.png" alt="Web Development" className="w-32 h-24 object-contain mb-6 drop-shadow-lg" />
+        <div className="flex flex-col items-center bg-neutral-50 rounded-2xl shadow-xl p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl">
+          <img src="/services/web_development.png" alt="Web Development" className="w-32 h-24 object-contain mb-6 drop-shadow-lg" />
           <span className="text-xl font-semibold text-black text-center">Web Development</span>
         </div>
         {/* Creative Design */}
-        <div className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/services/creative-design.png" alt="Creative Design" className="w-32 h-24 object-contain mb-6 drop-shadow-lg" />
+        <div className="flex flex-col items-center bg-neutral-50 rounded-2xl shadow-xl p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl">
+          <img src="/services/creative_design.png" alt="Creative Design" className="w-32 h-24 object-contain mb-6 drop-shadow-lg" />
           <span className="text-xl font-semibold text-black text-center">Creative Design</span>
         </div>
         {/* Branding */}
-        <div className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl">
+        <div className="flex flex-col items-center bg-neutral-50 rounded-2xl shadow-xl p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl">
           <img src="/services/branding.png" alt="Branding" className="w-32 h-24 object-contain mb-6 drop-shadow-lg" />
           <span className="text-xl font-semibold text-black text-center">Branding</span>
         </div>
         {/* Product Design */}
-        <div className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/services/product-design.png" alt="Product Design" className="w-32 h-24 object-contain mb-6 drop-shadow-lg" />
+        <div className="flex flex-col items-center bg-neutral-50 rounded-2xl shadow-xl p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl">
+          <img src="/services/product_design.png" alt="Product Design" className="w-32 h-24 object-contain mb-6 drop-shadow-lg" />
           <span className="text-xl font-semibold text-black text-center">Product Design</span>
         </div>
       </div>

@@ -7,7 +7,7 @@ export const WorkExperience: React.FC = () => {
   const projects = projectData
   return (
     <section
-      className="flex flex-col items-center w-full px-4 sm:px-8 md:px-12 max-md:items-center max-md:text-center"
+      className=" flex flex-col items-center w-full px-4 sm:px-8 md:px-12 max-md:items-center max-md:text-center"
       data-aos="fade-up"
     >
       <img
@@ -15,7 +15,7 @@ export const WorkExperience: React.FC = () => {
         alt="Work experience icon"
         className="aspect-[6.49] object-contain w-[156px] max-w-full mt-12 max-md:mt-10"
       />
-      <h2 className="text-black text-[32px] font-semibold font-manrope leading-none tracking-[-0.96px] mt-[22px]">
+      <h2 className="text-black text-[32px] font-semibold font-manrope leading-none tracking-[-0.96px] mt-[64px]">
         Here's What I've Been Up To.
       </h2>
       {projects.map((project) => (

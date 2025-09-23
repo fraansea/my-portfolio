@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const ProjectHero: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <div className="flex w-[510px] max-w-full flex-col items-stretch">
       <div className="flex items-stretch gap-2 text-sm text-black font-normal tracking-[-0.42px] leading-[1.3] mt-[52px] max-md:mt-10">
@@ -9,7 +11,7 @@ export const ProjectHero: React.FC = () => {
           alt="Back arrow"
           className="aspect-[1] object-contain w-4 shrink-0"
         />
-        <button className="my-auto hover:underline transition-all">
+        <button onClick={()=>navigate('/')} className="my-auto hover:underline transition-all">
           Go back
         </button>
       </div>
