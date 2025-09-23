@@ -45,7 +45,6 @@ export const Hero: React.FC = () => {
                   '/three.png',
                   '/pic1.png',
                   '/pic2.png',
-                  '/sample.png',
                 ].map((src, i) => (
                   <CarouselItem key={i} className="flex justify-center px-2 min-w-[350px] max-w-[420px]">
                     <div
