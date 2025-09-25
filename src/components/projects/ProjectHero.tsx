@@ -1,7 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const ProjectHero: React.FC = () => {
+interface ProjectHeroProps {
+  title:string,
+  live_link:string,
+  main_img:string,
+  type: string
+}
+
+export const ProjectHero: React.FC<ProjectHeroProps> = ({title,live_link,main_img,type}) => {
   const navigate = useNavigate()
   return (
     <div className="flex w-[510px] max-w-full flex-col items-stretch">
@@ -19,14 +26,15 @@ export const ProjectHero: React.FC = () => {
       <div className="flex w-full items-stretch gap-5 text-black flex-wrap justify-between mt-[31px] max-md:max-w-full">
         <h1 className="flex items-stretch gap-2 text-[32px] font-semibold whitespace-nowrap tracking-[-0.96px] leading-[1.1]">
           <div className="flex flex-col items-stretch">
-            <span>Dreamland</span>
+            <span>{title}</span>
             <span className="mt-[13px]">Concept</span>
           </div>
-          <span>App</span>
+          <span>{type}</span>
         </h1>
         
         <a 
-          href="#"
+          href={live_link}
+          target='blank'
           className="bg-white text-base font-medium tracking-[-0.32px] leading-[1.2] mt-[17px] rounded-[100px] hover:shadow-md transition-shadow"
           aria-label="Visit live website"
         >
@@ -42,9 +50,9 @@ export const ProjectHero: React.FC = () => {
       </div>
       
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/75b8460b6ce84d6296a26b9d9db8bac5/bcd4379b67c0f9a7953eaeca4a5936cff4299e0e?placeholderIfAbsent=true"
+        src={main_img}
         alt="Dreamland Concept App preview"
-        className="aspect-[1.34] object-contain w-full mt-[70px] rounded-[20px] max-md:max-w-full max-md:mt-10"
+        className=" aspect-[1.34] object-contain w-full mt-[70px] rounded-[20px] max-md:max-w-full max-md:mt-10"
       />
     </div>
   );

@@ -10,7 +10,7 @@ interface ProjectSectionProps {
 
 export const ProjectSection: React.FC<ProjectDataInterface> = ({
   title,
-  description,subTitle,subDescription,subImage1,subImage2
+  description,subTitle,subDescription,subImage1,subImage2,live_link
 }) => {
   return (
     <>
