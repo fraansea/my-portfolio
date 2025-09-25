@@ -1,4 +1,3 @@
-
 import { ReactLenis } from "lenis/react";
 
 const LenisProvider = ({ children }: { children: React.ReactNode }) => {

@@ -1,26 +1,25 @@
 export const KodabyteCompanyBadge = () => {
   return (
-    <div className="rounded-[10px]  flex gap-2 bg-[#E2EDFF] justify-center items-center p-1 border border-[#CBD5E5]">
-        <img className="" src="/kodabyte.svg" alt="" />
-        <p className="text-[#0C5BD3] text-base">Kodabyte</p>
+    <div className="flex items-center justify-center gap-2 rounded-[10px] border border-[#CBD5E5] bg-[#E2EDFF] p-1">
+      <img className="" src="/kodabyte.svg" alt="" />
+      <p className="text-base text-[#0C5BD3]">Kodabyte</p>
     </div>
-  )
-}
+  );
+};
 export const LevantateCompanyBadge = () => {
   return (
-    <div className="rounded-[10px] flex gap-2 bg-[#EFEFEF] justify-center items-center p-1 border border-black/10">
-        <img className="" src="/levantate.svg" alt="" />
-        <p className="text-black text-base">Levantate Labs</p>
+    <div className="flex items-center justify-center gap-2 rounded-[10px] border border-black/10 bg-[#EFEFEF] p-1">
+      <img className="" src="/levantate.svg" alt="" />
+      <p className="text-base text-black">Levantate Labs</p>
     </div>
-  )
-}
+  );
+};
 
 export const MarketsMojoCompanyBadge = () => {
   return (
-    <div className="rounded-[10px] flex gap-2 bg-[#EEFFE2] justify-center items-center p-1 border border-black/10">
-        <img className="w-5 h-5" src="/markets-mojo.png"  alt="" />
-        <p className="text-[#5F8E3E] text-base">Markets Mojo</p>
+    <div className="flex items-center justify-center gap-2 rounded-[10px] border border-black/10 bg-[#EEFFE2] p-1">
+      <img className="h-5 w-5" src="/markets-mojo.png" alt="" />
+      <p className="text-base text-[#5F8E3E]">Markets Mojo</p>
     </div>
-  )
-}
-
+  );
+};

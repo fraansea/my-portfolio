@@ -3,23 +3,25 @@ import { Home, Instagram, Images, Linkedin, Dribbble, X } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col items-center py-12 min-h-[160px] w-full px-4 sm:px-8 md:px-12">
-      <p className="text-[rgba(90,90,90,1)] text-base font-normal font-manrope leading-none tracking-[0.16px] text-center mt-28 max-md:mt-10">
+    <footer className="flex min-h-[160px] w-full flex-col items-center px-4 py-12 sm:px-8 md:px-12">
+      <p className="mt-28 text-center font-manrope text-base font-normal leading-none tracking-[0.16px] text-[rgba(90,90,90,1)] max-md:mt-10">
         Copyright © 2025 Francis Gigi. All rights reserved.
       </p>
-      <FooterLinks/>
+      <FooterLinks />
     </footer>
   );
 };
 
 const FooterLinks = () => {
-    const insta="https://www.instagram.com/fraansea?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+  const insta =
+    "https://www.instagram.com/fraansea?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
   // const twitter=""
-  const linkedIn="https://www.linkedin.com/in/francis-gigi-kuyilanparambil-39942a27b/"
-  const dribble="https://dribbble.com/"
+  const linkedIn =
+    "https://www.linkedin.com/in/francis-gigi-kuyilanparambil-39942a27b/";
+  const dribble = "https://dribbble.com/";
 
   return (
-    <div className="flex  gap-8 mt-8">
+    <div className="mt-8 flex gap-8">
       <NavIcon
         icon={<Instagram size={20} color="#111" strokeWidth={1.5} />}
         link={insta}

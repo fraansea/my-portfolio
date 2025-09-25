@@ -3,12 +3,11 @@ import { Header } from "./Header";
 import { ContactForm } from "./ContactForm";
 import { Footer } from "./Footer";
 
-
 const Layout = () => {
   return (
-    <div className="min-h-screen bg-white border-l border-r border-gray-200 max-w-4xl mx-auto">
+    <div className="mx-auto min-h-screen max-w-4xl border-l border-r border-gray-200 bg-white">
       <Header />
-      <main className="bg-white flex w-full flex-col overflow-hidden items-center max-md:max-w-full ">
+      <main className="flex w-full flex-col items-center overflow-hidden bg-white max-md:max-w-full">
         <Outlet />
         <ContactForm />
         <Footer />
