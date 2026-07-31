@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
+import { getHeroCarouselImages } from "@/lib/adminStorage";
+import { StoredImage } from "./StoredImage";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { Download, Eye } from "lucide-react";
+
+const DEFAULT_CAROUSEL_IMAGES = ["/one.png", "/two.png", "/three.png"];
+const RESUME_PATH = "/Francis Gigi Resume.pdf";
+const RESUME_FILENAME = "Francis-Gigi-Resume.pdf";
 
 export const Hero: React.FC = () => {
+  const [carouselImages, setCarouselImages] = useState<string[]>(() =>
+    getHeroCarouselImages().length > 0 ? getHeroCarouselImages() : DEFAULT_CAROUSEL_IMAGES
+  );
+
+  useEffect(() => {
+    const sync = () => {
+      const stored = getHeroCarouselImages();
+      setCarouselImages(stored.length > 0 ? stored : DEFAULT_CAROUSEL_IMAGES);
+    };
+    window.addEventListener("storage", sync);
+    window.addEventListener("hero-carousel-updated", sync);
+    return () => {
+      window.removeEventListener("storage", sync);
+      window.removeEventListener("hero-carousel-updated", sync);
+    };
+  }, []);
   return (
     <section
       className="flex w-full flex-col items-center px-4 text-center max-md:items-center max-md:text-center sm:px-8 md:px-12"
@@ -22,9 +51,30 @@ export const Hero: React.FC = () => {
         Crafting seamless experiences and bold visuals. College student by day,
         creative thinker, and aspiring innovator by night.
       </p>
-      <button className="mt-8 w-full max-w-xs rounded-2xl bg-black px-8 py-4 font-manrope text-lg font-medium text-white sm:mt-[26px] sm:max-w-fit">
-        Download Me
-      </button>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <button
+            type="button"
+            className="mt-8 w-full max-w-xs rounded-2xl bg-black px-8 py-4 font-manrope text-lg font-medium text-white transition-colors hover:bg-zinc-800 sm:mt-[26px] sm:max-w-fit"
+          >
+            Download Me
+          </button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="center" className="min-w-[180px]">
+          <DropdownMenuItem
+            onClick={() => window.open(RESUME_PATH, "_blank", "noopener,noreferrer")}
+          >
+            <Eye className="mr-2 h-4 w-4" />
+            View Resume
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <a href={RESUME_PATH} download={RESUME_FILENAME}>
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
+            </a>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
       <div className="mt-5 flex w-full items-center justify-center sm:mt-4">
         <div className="flex w-full max-w-xs items-center gap-2 rounded-full bg-green-100 px-6 py-3 font-manrope text-base font-medium text-green-700 sm:max-w-fit">
           <span className="inline-block h-3 w-3 rounded-full bg-green-500"></span>
@@ -49,13 +99,7 @@ export const Hero: React.FC = () => {
               className="mx-auto"
             >
               <CarouselContent>
-                {[
-                  "/one.png",
-                  "/two.png",
-                  "/three.png",
-                  "/pic1.png",
-                  "/pic2.png",
-                ].map((src, i) => (
+                {carouselImages.map((src, i) => (
                   <CarouselItem
                     key={i}
                     className="flex min-w-[350px] max-w-[420px] justify-center px-2"
@@ -69,7 +113,7 @@ export const Hero: React.FC = () => {
                         minHeight: 220,
                       }}
                     >
-                      <img
+                      <StoredImage
                         src={src}
                         alt={`Project ${i + 1}`}
                         className="h-full w-full rounded-[16px] object-contain"
